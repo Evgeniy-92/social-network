@@ -1,0 +1,46 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 330px 2fr;
+    /* padding: 20px 5px; */
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #756097;
+    padding: 20px;
+}
+
+.newMessage {
+    display: flex;
+}
+
+.newMessage textarea {
+    width: 555px;
+    height: 30px;
+    box-sizing: border-box;
+    resize: none;
+    background-color: #d4a6ffd8;
+    border-color: #5F4A80;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.newMessage textarea:focus {
+    outline: none;
+}
+
+
+.newMessage button {
+    width: 60px;
+    height: 30px;
+    background-color: #d4a6ffd8;
+    border: 2px solid #5F4A80;
+    border-radius: 10px;
+}
+
+

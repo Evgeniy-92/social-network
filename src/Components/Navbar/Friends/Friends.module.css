@@ -1,0 +1,13 @@
+.friendsBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friends h2 {
+    margin-bottom: 13px;
+    margin-top: 100px;
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+

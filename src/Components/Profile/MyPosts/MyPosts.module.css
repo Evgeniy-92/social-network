@@ -1,0 +1,18 @@
+.postsBlock {
+    margin: 10px;
+}
+
+.postsBlock textarea {
+    width: 290px;
+    min-height: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    resize: none;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.postsBlock textarea:focus {
+    outline: none;
+}

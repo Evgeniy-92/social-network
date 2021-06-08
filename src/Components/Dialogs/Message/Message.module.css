@@ -1,0 +1,20 @@
+.messageEl {
+    background-color: #d4a6ffd8;
+    margin-bottom: 17px;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+.messageBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.myMessage {
+    display: flex;
+}
+
+.friendsMessage {
+    display: flex;
+    justify-content: flex-end;
+}
