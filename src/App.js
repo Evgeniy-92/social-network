@@ -14,11 +14,9 @@ function App(props) {
                 <Navbar state={props.state.sidebur}/>
                 <div className="app-wrapper-content">
                     <Route path='/profile'
-                           render={() => <Profile state={props.state.profilePage} addPost={props.addPost}
-                                                  updateNewPostText={props.updateNewPostText}/>}/>
+                           render={() => <Profile state={props.state.profilePage} dispatch={props.dispatch}/>}/>
                     <Route path='/dialogs'
-                           component={() => <Dialogs state={props.state.dialogsPage} addMessage={props.addMessage}
-                                                     updateNewMessageText={props.updateNewMessageText}/>}/>
+                           component={() => <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch}/>}/>
                 </div>
             </div>
         </BrowserRouter>

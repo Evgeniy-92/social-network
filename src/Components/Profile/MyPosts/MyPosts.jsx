@@ -1,19 +1,21 @@
 import React from 'react';
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import {addPostActiveCreater, apdateNewPostTextActiveCreater} from "../../../redux/state";
+
+
 
 const MyPosts = (props) => {
     let postElement = props.posts.posts.map(p => <Post message={p.message} count={p.likesCount}/>)
 
     let newPostRef = React.createRef()
     let addPost = () => {
-
-        props.addPost()
+        props.dispatch(addPostActiveCreater())
     };
 
     let onPostChenge = () => {
         let text = newPostRef.current.value
-        props.updateNewPostText(text)
+        props.dispatch(apdateNewPostTextActiveCreater(text))
     };
 
     return (
