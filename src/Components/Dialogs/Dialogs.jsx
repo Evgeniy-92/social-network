@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import DialogsInfo from './DialogsInfo/DialogsInfo';
 import Message from './Message/Message';
-import {addMessageActiveCreater, updateNewMessageTextActiveCreator} from "../../redux/state";
+import {addMessageActionCreater, updateNewMessageTextActionCreator} from "../../redux/dialods-reducer";
 
 
 const Dialogs = (props) => {
@@ -10,15 +10,14 @@ const Dialogs = (props) => {
     let messagesElement = props.state.messages.map(m => <Message myMessage={m.myMessage}
                                                                  friendsMessage={m.friendsMessage}/>)
 
-    let newMessageRef = React.createRef();
 
     let addMessage = () => {
-        props.dispatch(addMessageActiveCreater())
+        props.dispatch(addMessageActionCreater());
     };
 
-    let onMessageChange = () => {
-        let text = newMessageRef.current.value
-        props.dispatch(updateNewMessageTextActiveCreator(text))
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.dispatch(updateNewMessageTextActionCreator(text));
     }
 
     return (
@@ -32,8 +31,9 @@ const Dialogs = (props) => {
                 </div>
 
                 <div className={classes.newMessage}>
-                    <textarea ref={newMessageRef} onChange={onMessageChange}
-                              value={props.state.newMessageText}></textarea>
+                    <textarea onChange={onMessageChange}
+                              value={props.state.newMessageText}
+                              placeholder='Enter your message'></textarea>
                     <button onClick={addMessage}>send</button>
                 </div>
             </div>
