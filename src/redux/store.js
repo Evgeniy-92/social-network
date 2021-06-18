@@ -53,10 +53,9 @@ let store = {
                 {id: 6, myMessage: 'Мои отлично?'},
             ],
             newMessageText: '',
-
         },
 
-        sidebur: {
+        sidebar: {
             friends: [
                 {
                     id: 1,
